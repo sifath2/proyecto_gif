@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFs</title>
+    <style>
+        .div-de-gifs{
+            position: relative;
+            height: 110%;
+            display: flex;
+            place-content: center;
+            align-items: center;
+            padding: none;
+        }
+
+        #fondo{
+            width: 1360px;
+            position:absolute;
+            z-index: -1;
+            height: 1298px;
+        }
+        #gif1{
+            position:absolute;
+            z-index: 1;
+            margin-top: 200px;
+            padding-left: 200px;
+        }
+
+        #gif2{
+            position:absolute;
+            z-index: 1;
+            margin-top: 400px;
+            padding-right: 300px;
+        }
+
+        #boton{
+            background-color:#FF7F3F;
+            border-radius: 70px;
+            border-color: #A3423C;
+            font-weight: 600;
+            width: 195px;
+            height: 80px;
+            font-size: 40px;
+            font-style:italic;
+            display: flex;
+            place-content: center;
+            padding-top: 13px;
+        }
+        #body{
+            margin-left: 40%;
+        }
+
+        body{
+            background-color:#df9567;
+        }
+
+        #puntos{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="body"> 
+        <div id="puntos">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div> 
+    
+    <button id="boton" type="submit">Púlsame</button>
+    </div> 
+    <div class="div-de-gifs" >
+        <img id="gif2"  hidden src="https://flyclipart.com/thumb2/explosion-gif-transparent-transparent-gif-sticker-741584.png" alt="">
+        <img id="gif1"  hidden src="https://c.tenor.com/nz2nnGCEYH8AAAAj/micacalala-michi.gif" alt="a">
+        <img id="fondo" hidden src="https://c.tenor.com/lcU3yBUdAHUAAAAC/gif.gif" alt="ei">
+            
+    </div>
+
+    <script>
+        let hola = document.getElementById("hola");
+        let boton = document.getElementById("boton");
+        let gif1 = document.getElementById("gif1");
+        let gif2 = document.getElementById("gif2");
+        let fondo = document.getElementById("fondo");
+        let body = document.getElementById("body");
+        let puntos = document.getElementById("puntos");
+        
+        
+            boton.onclick = function funcion1(e) {
+                gif1.removeAttribute('hidden');
+                gif2.removeAttribute('hidden');
+                fondo.removeAttribute('hidden');
+                boton.style.display = "none";
+                body.style.display = "none";
+                puntos = null;
+                console.log("oahfoajho");
+            }
+
+    </script>
+    
+</body>
+</html>
